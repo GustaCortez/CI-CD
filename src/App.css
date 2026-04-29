@@ -184,6 +184,23 @@ body {
 .student-grid > div { display: flex; flex-direction: column; gap: 4px; }
 .field-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
 .field-value { font-size: 14px; font-weight: 500; color: var(--text); }
+.field-input {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  background: rgba(79,142,247,0.08);
+  border: 1px solid rgba(79,142,247,0.25);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: var(--font-body);
+  transition: all 0.2s ease;
+}
+.field-input:focus {
+  outline: none;
+  background: rgba(79,142,247,0.12);
+  border-color: rgba(79,142,247,0.5);
+  box-shadow: 0 0 12px rgba(79,142,247,0.2);
+}
 
 /* ── Footer ── */
 .footer {

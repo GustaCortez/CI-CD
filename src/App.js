@@ -4,6 +4,8 @@ import "./App.css";
 function App() {
   const [visible, setVisible] = useState(false);
   const [time, setTime] = useState(new Date());
+  const [nombre, setNombre] = useState("Tu Nombre");
+  const [carnet, setCarnet] = useState("123456");
 
   useEffect(() => {
     setTimeout(() => setVisible(true), 100);
@@ -48,51 +50,60 @@ function App() {
           <div className="clock-date">{formatDate(time)}</div>
         </div>
 
-        {/* Info cards */}
+        {/* Features */}
         <div className="cards">
           <div className="card">
-            <div className="card-icon">⚡</div>
-            <h3>CI/CD Pipeline</h3>
-            <p>Despliegue automático al hacer Push a la rama main en GitHub.</p>
+            <div className="card-icon">⚙️</div>
+            <h3>CI/CD Automatizado</h3>
+            <p>Despliegue automático en cada push a main</p>
           </div>
           <div className="card">
-            <div className="card-icon"></div>
+            <div className="card-icon">☁️</div>
             <h3>Azure App Service</h3>
-            <p>Hospedada en la nube de Microsoft con alta disponibilidad.</p>
+            <p>Infraestructura escalable en la nube</p>
           </div>
           <div className="card">
-            <div className="card-icon"></div>
-            <h3>GitHub Actions</h3>
-            <p>Workflow automatizado que compila y despliega la aplicación.</p>
+            <div className="card-icon">⚡</div>
+            <h3>Performance</h3>
+            <p>Optimizado para máxima velocidad</p>
           </div>
         </div>
 
         {/* Student info */}
         <div className="student-card">
-          <div className="student-label">Información del Estudiante</div>
+          <div className="student-label">👨‍🎓 Información del Estudiante</div>
           <div className="student-grid">
             <div>
-              <span className="field-label">Curso</span>
-              <span className="field-value">Programación en la Nube</span>
+              <div className="field-label">Nombre</div>
+              <input
+                type="text"
+                value={nombre}
+                onChange={(e) => setNombre(e.target.value)}
+                className="field-input"
+                placeholder="Ingresa tu nombre"
+              />
             </div>
             <div>
-              <span className="field-label">Tarea</span>
-              <span className="field-value">No. 6 — CI/CD</span>
+              <div className="field-label">Carnet</div>
+              <input
+                type="text"
+                value={carnet}
+                onChange={(e) => setCarnet(e.target.value)}
+                className="field-input"
+                placeholder="Ingresa tu carnet"
+              />
             </div>
             <div>
-              <span className="field-label">Tecnología</span>
-              <span className="field-value">React + Azure + GitHub Actions</span>
+              <div className="field-label">Tarea</div>
+              <div className="field-value">CI/CD - Tarea 6</div>
             </div>
             <div>
-              <span className="field-label">Versión</span>
-              <span className="field-value">1.0.0</span>
+              <div className="field-label">Fecha</div>
+              <div className="field-value">{formatDate(new Date())}</div>
             </div>
           </div>
+          <div className="footer">Despliegue automático en Azure vía GitHub Actions</div>
         </div>
-
-        <footer className="footer">
-          Tarea No. 6 · CI/CD · {new Date().getFullYear()}
-        </footer>
       </main>
     </div>
   );
