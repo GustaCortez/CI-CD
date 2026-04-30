@@ -53,17 +53,17 @@ function App() {
         {/* Features */}
         <div className="cards">
           <div className="card">
-            <div className="card-icon">⚙️</div>
+            <div className="card-icon"></div>
             <h3>CI/CD Automatizado</h3>
             <p>Despliegue automático en cada push a main</p>
           </div>
           <div className="card">
-            <div className="card-icon">☁️</div>
+            <div className="card-icon"></div>
             <h3>Azure App Service</h3>
             <p>Infraestructura escalable en la nube</p>
           </div>
           <div className="card">
-            <div className="card-icon">⚡</div>
+            <div className="card-icon"></div>
             <h3>Performance</h3>
             <p>Optimizado para máxima velocidad</p>
           </div>
@@ -71,7 +71,7 @@ function App() {
 
         {/* Student info */}
         <div className="student-card">
-          <div className="student-label">👨‍🎓 Información del Estudiante</div>
+          <div className="student-label"> Información del Estudiante</div>
           <div className="student-grid">
             <div>
               <div className="field-label">Nombre</div>
