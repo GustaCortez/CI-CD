@@ -4,8 +4,8 @@ import "./App.css";
 function App() {
   const [visible, setVisible] = useState(false);
   const [time, setTime] = useState(new Date());
-  const [nombre, setNombre] = useState("Tu Nombre");
-  const [carnet, setCarnet] = useState("123456");
+  const [nombre, setNombre] = useState("Melvin Gustavo Cortez y Cortez");
+  const [carnet, setCarnet] = useState("0907-17-3971");
 
   useEffect(() => {
     setTimeout(() => setVisible(true), 100);
@@ -95,7 +95,12 @@ function App() {
             </div>
             <div>
               <div className="field-label">Tarea</div>
-              <div className="field-value">CI/CD - Tarea 6</div>
+              <input
+                type="text"
+                value="CI/CD - Tarea 6"
+                className="field-input"
+                readOnly
+              />
             </div>
             <div>
               <div className="field-label">Fecha</div>
